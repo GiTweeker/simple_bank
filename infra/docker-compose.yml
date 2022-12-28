@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:12-alpine
+    container_name: bank-db
+    restart: always
+    environment:
+      POSTGRES_DB: "bank"
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init-docker-postgres.sql:/docker-entrypoint-initdb.d/init-docker-postgres.sql
+
+volumes:
+  db_data:
