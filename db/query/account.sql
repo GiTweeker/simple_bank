@@ -10,6 +10,12 @@ RETURNING *;
 SELECT * FROM accounts
 WHERE id = $1 limit 1;
 
+-- name: GetAccountForOwner :one
+SELECT * FROM accounts
+WHERE id = $1
+and owner = $2
+limit 1;
+
 -- name: GetAccountForUpdate :one
 SELECT * FROM accounts
 WHERE id = $1 limit 1
@@ -20,6 +26,14 @@ SELECT * FROM accounts
 ORDER BY id
 limit $1
 offset $2;
+
+-- name: ListAccountsForOwner :many
+SELECT * FROM accounts
+where owner = $1
+ORDER BY id
+limit $2
+offset $3;
+
 
 -- name: UpdateAccountBalance :one
 UPDATE accounts
