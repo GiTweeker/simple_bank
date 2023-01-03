@@ -42,10 +42,10 @@ func (server *Server) setUpRouter() {
 	//router := gin.Default()
 
 	server.router.POST("/users/login", server.loginUser)
+	server.router.POST("/users", server.createUser)
 
 	authRoutes := server.router.Group("/").Use(authMiddleware(server.tokenMaker))
 
-	authRoutes.POST("/users", server.createUser)
 	authRoutes.POST("/accounts", server.createAccount)
 	authRoutes.GET("/accounts/:id", server.getAccount)
 	authRoutes.GET("/accounts", server.listAccounts)
