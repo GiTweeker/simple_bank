@@ -1,1 +1,18 @@
 migrate create -ext sql -dir db/migration -seq add_users
+
+x-forwarded-for
+[127.0.0.1]
+authorization
+[Bearer v2.local.aSpT0HqL-oXq0eVT54yOvQkipI38Dc8eusT1M8lTtEkIH1x1F8jxOteNG79gXApeTTzx18JU6T3N5Mh8GocL2UM9QjA9PAx8pcfBGyGspaPRiOKIZJVJnaTl44BUDNeWPkQGcBL_frewpF1PRY5FmkGLRdUVgyef3p2z4ciKvaRUoXXIctVNvseiQDN8v28mq_TaN9p_tZJQFQUPkPEkSfMnP4tN_kmYLKRqD8TRV8bGVJumTzHGwd3LiXE1btsj52HB.bnVsbA]
+grpcgateway-authorization
+[Bearer v2.local.aSpT0HqL-oXq0eVT54yOvQkipI38Dc8eusT1M8lTtEkIH1x1F8jxOteNG79gXApeTTzx18JU6T3N5Mh8GocL2UM9QjA9PAx8pcfBGyGspaPRiOKIZJVJnaTl44BUDNeWPkQGcBL_frewpF1PRY5FmkGLRdUVgyef3p2z4ciKvaRUoXXIctVNvseiQDN8v28mq_TaN9p_tZJQFQUPkPEkSfMnP4tN_kmYLKRqD8TRV8bGVJumTzHGwd3LiXE1btsj52HB.bnVsbA]
+grpcgateway-content-type
+[application/json]
+grpcgateway-cache-control
+[no-cache]
+grpcgateway-user-agent
+[PostmanRuntime/7.29.0]
+grpcgateway-accept
+[*/*]
+x-forwarded-host
+[0.0.0.0:8080]
